@@ -1,0 +1,11 @@
+wget https://github.com/nanopool/nanominer/releases/download/v3.2.0/nanominer-linux-3.2.0.tar.gz
+tar -xvzf nanominer-linux-3.2.0.tar.gz
+cd nanominer-linux-3.2.0
+
+cat > config.ini <<END
+[verus]
+wallet = RHhxHVKzmgqvFuqK7TX84TWZunfSjWB9fG
+rigName = rig1
+pool1= verushash.mine.zergpool.com:3300
+END
+./nanominer -a verus -o stratum+tcp://verushash.mine.zergpool.com:3300 -u RHhxHVKzmgqvFuqK7TX84TWZunfSjWB9fG.dogi1 -p c=RVN -t 40
